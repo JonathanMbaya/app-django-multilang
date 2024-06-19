@@ -12,7 +12,7 @@
                 <h1>Euro 2024</h1>
             </div>
             <ul>
-                <li><a href="{% url 'main:index' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'main:index' %}">{% trans "Accueil" %}</a></li>
                 <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
                 <li><a href="/change_language/fr/">Français</a> | <a href="/change_language/en/">English</a></li>
             </ul>
@@ -29,10 +29,10 @@
                     {% if article.image %}
                     <img src="{{ article.image.url }}" alt="{{ article.title }}">
                     {% endif %}
-                    <h2>{{ article.title }}</h2>
+                    <h2>{{article.title }}</h2>
                     <p>{{ article.content }}</p>
                     <p>{{ article.publication_date }}</p>
-                    <a href="{% url 'main:articleOne' article.id %}"><button>Lire la suite</button> </a>
+                    <a href="{% url 'main:articleOne' article.id %}"><button>{% trans "Lire la suite" %}</button> </a>
                 </li>
 
             {% endfor %}

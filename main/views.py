@@ -1,6 +1,13 @@
-from django.shortcuts import get_object_or_404,render
+from django.shortcuts import get_object_or_404,render,redirect
 from .models import Article
+from django.utils import translation
+from django.conf import settings
 
+def change_language(request, language):
+    translation.activate(language)
+    response = redirect('/')
+    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, language)
+    return  response
 
 def index(request):
     latest_article_list = Article.objects.order_by("-publication_date")[:3]
