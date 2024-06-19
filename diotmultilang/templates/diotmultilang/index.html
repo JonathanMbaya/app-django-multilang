@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load i18n %}
+    <title>{% trans "Articles" %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{% trans "Articles" %}</h1>
+        <ul>
+            {% for article in articles %}
+                <li>
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.content }}</p>
+                    <p>{{ article.publication_date }}</p>
+                    {% if article.image %}
+                        <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+
+    </main>
+
+
+
+    <a href="/change_language/fr/">Français</a> | <a href="/change_language/en/">English</a>
+</body>
+</html>
