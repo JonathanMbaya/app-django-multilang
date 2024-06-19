@@ -2,7 +2,7 @@
 <html>
 <head>
     {% load i18n %}
-    <title>{% trans "Articles" %}</title>
+    <title>{% trans "Blog" %}</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -16,9 +16,9 @@
     </header>
 
     <main>
-        <h1>{% trans "Les dernières nouvelles tendances" %}</h1>
+        <h1>{% trans "Blog" %}</h1>
         <ul>
-            {% for article in latest_article_list %}
+            {% for article in all_article_list %}
             <li>
                 <h2>{{ article.title }}</h2>
                 <p>{{ article.content }}</p>
@@ -27,10 +27,10 @@
                     <img src="{{ article.image.url }}" alt="{{ article.title }}">
                 {% endif %}
             </li>
+
+            <a href="{% url 'diotmultilang:articleOne' article.id %}"><button>Lire la suite</button> </a>
+
         {% endfor %}
-
-
-        <a href="blog/"><button class="btn-seemore">Voir plus</button></a>
             
         </ul>
 
