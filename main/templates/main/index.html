@@ -16,9 +16,9 @@
                 <h1>Euro 2024</h1>
             </div>
             <ul>
-                <li><a href="{% url 'main:index' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'main:index' %}">{% trans "Accueil" %}</a></li>
                 <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
-                <li><a href="/change_language/fr/">{%trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
+                <li><a href="/change_language/fr/">{% trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
             </ul>
         </nav>
         <img src="{% static 'images/header-euro.jpg' %}" alt="">
