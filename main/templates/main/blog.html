@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load i18n static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% trans "Blog" %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Euro 2024</h1>
+            </div>
+            <ul>
+                <li><a href="{% url 'main:index' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
+                <li><a href="/change_language/fr/">Français</a> | <a href="/change_language/en/">English</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="blog">
+        <h1>{% trans "Blog" %}</h1>
+        <ul>
+
+            {% for article in all_article_list %}
+                <li>
+                    {% if article.image %}
+                    <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                    {% endif %}
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.content }}</p>
+                    <p>{{ article.publication_date }}</p>
+                    <a href="{% url 'main:articleOne' article.id %}"><button>Lire la suite</button> </a>
+                </li>
+
+            {% endfor %}
+            
+        </ul>
+
+    </main>
+
+</body>
+</html>
