@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load i18n static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% trans "Articles" %}</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Euro 2024</h1>
+            </div>
+            <ul>
+                <li><a href="{% url 'main:index' %}">{% trans "Accueil" %}</a></li>
+                <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
+                <li><a href="/change_language/fr/">{% trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
+            </ul>
+        </nav>
+        <img src="{% static 'images/header-euro.jpg' %}" alt="">
+    </header>
+    {% block content %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

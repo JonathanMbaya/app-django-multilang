@@ -7,4 +7,5 @@ urlpatterns = [
     path("blog/", views.articles, name="articles"),
     path('article/<int:article_id>/', views.articleOne, name='articleOne'),
     path('change_language/<str:language>/', views.change_language, name='change_language'),
+    path('chatbot/', views.chatbotview, name='chatbotview'),
 ]

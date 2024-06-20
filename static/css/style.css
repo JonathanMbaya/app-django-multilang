@@ -137,4 +137,25 @@ button:hover{
     transition: .3s;
     cursor:pointer;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-bot{
+    background-color: rgb(118, 238, 118);
+    position: fixed !important;
+    z-index: 100;
+    right: 2rem;
+    bottom: 2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
 

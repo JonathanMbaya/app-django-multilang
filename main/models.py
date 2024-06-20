@@ -8,3 +8,9 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+class Messages(models.Model):
+    user_message = models.TextField()
+    bot_message = models.TextField()
+    publication_date = models.DateTimeField(auto_now_add=True)
+    

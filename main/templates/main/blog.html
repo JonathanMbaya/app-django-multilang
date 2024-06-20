@@ -3,9 +3,18 @@
 <head>
     {% load i18n static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>{% trans "Blog" %}</title>
 </head>
 <body>
+    <div class="chat-bot">
+        <a href="/chatbot/">
+            <span class="material-symbols-outlined">
+                smart_toy
+            </span>
+        </a>
+    </div>
+
     <header>
         <nav>
             <div class="logo">
@@ -14,7 +23,7 @@
             <ul>
                 <li><a href="{% url 'main:index' %}">{% trans "Accueil" %}</a></li>
                 <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
-                <li><a href="/change_language/fr/">{% trans "Anglais" %}</a> | <a href="/change_language/en/">{% trans "Français" %}</a></li>
+                <li><a href="/change_language/fr/">{% trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
             </ul>
         </nav>
     </header>
