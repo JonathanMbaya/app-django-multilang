@@ -158,6 +158,19 @@ form {
     cursor: pointer;
 }
 
+footer{
+    
+    bottom: 0rem;
+    margin-top: 2rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background-color: black; 
+    color: white; 
+    height: 5vh;
+}
+
 /* Media Queries */
 
 /* Styles pour les mobiles */
