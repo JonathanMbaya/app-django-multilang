@@ -17,14 +17,14 @@ header{
     padding-left: 2rem;
 }
 
-header img{
+header img {
     position: fixed;
     z-index: -100;
     width: 80%;
     margin-top: 45rem;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     padding-left: 1rem;
@@ -37,15 +37,15 @@ nav{
 
 }
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 10rem;
 }
 
-nav ul li{
-padding: .5rem;
+nav ul li {
+    padding: .5rem;
 }
 
 ul , li a {
@@ -56,22 +56,22 @@ ul , li a {
 
 /* Partie Main */
 
-main{
+main {
     background-color: white;
     margin-top: 25rem;
     background: linear-gradient( rgba(255, 255, 255, 0.8),rgba(255, 255, 255),rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255))
 }
 
-main h1{
+main h1 {
  text-align: center;
  padding: 2rem;
 }
 
-main h2{
+main h2 {
     margin-top: 0rem;
 }
 
-main ul{
+main ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,24 +85,23 @@ main ul li {
     margin-bottom: 1.5rem;
 }
 
-main ul li img{
+main ul li img {
     width: 30%;
     border-radius: .5rem;
 }
 
-
-.text-content{
+.text-content {
     width: 40%;
 }
 
 /* CSS BLOG */
 
-.blog{
+.blog {
     margin-top: 5rem;
     width: 100%;
 }
 
-.blog ul{
+.blog ul {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -117,18 +116,18 @@ main ul li img{
     width: 30%;
 }
 
-.blog ul li img{
+.blog ul li img {
     width: 100%;
 }
 
-button{
+button {
     background-color: transparent;
     border: 1px solid black;
     border-radius: 2rem;
     padding: 1rem;
 }
 
-button:hover{
+button:hover {
     background-color: transparent;
     border: 1px solid coral;
     border-radius: 2rem;
@@ -137,19 +136,20 @@ button:hover{
     transition: .3s;
     cursor:pointer;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.chat-bot{
+.chat-bot {
     background-color: rgb(118, 238, 118);
     position: fixed !important;
     z-index: 100;
-    right: 2rem;
-    bottom: 2rem;
+    left: 1rem;
+    bottom: 4rem;
     width: 40px;
     height: 40px;
     display: flex;

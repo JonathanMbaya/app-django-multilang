@@ -94,6 +94,7 @@
             border: .4px solid lightgray;
         }
     </style>
+    
 </head>
 <body>
     <header>
@@ -113,26 +114,18 @@
         {% for message in messages %}
             <div class="chat-message">
                 <div class="bulle-user">
-                    <p class="user-message">
-                        {{ message.user_message }}
-                    </p>
-                    <span class="material-symbols-outlined">
-                        person
-                    </span>
+                    <p class="user-message">{{ message.user_message }}</p>
+                    <span class="material-symbols-outlined">person</span>
                 </div>
                 <div class="bulle-bot">
-                    <span class="material-symbols-outlined">
-                        smart_toy
-                    </span>
-                    <p class="bot-message">
-                        {{ message.bot_message }}
-                    </p>
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p class="bot-message">{{ message.bot_message }}</p>
                 </div>
             </div>
         {% endfor %}
         <form method="post">
             {% csrf_token %}
-            <input name="message" type="text" placeholder="Type your message here..."/><br>
+            <input name="message" type="text" placeholder="Type your message here..." /><br>
             <button type="submit">Send</button>
         </form>
     </div>
