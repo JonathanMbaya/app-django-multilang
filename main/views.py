@@ -50,16 +50,19 @@ def change_language(request, language):
     return  response
 
 def index(request):
+    # Récupération des 3 dernières publications d'articles et affiche 
     latest_article_list = Article.objects.order_by("-publication_date")[:3]
     article_last = {"latest_article_list": latest_article_list }
     return render(request, "main/index.html", article_last)
 
 def articles(request):
+    # Récupération de tous les articles et affichage
     all_article_list = Article.objects.all()
     article_list = {"all_article_list": all_article_list }
     return render(request, "main/blog.html", article_list)
 
 def articleOne(request, article_id):
+    # Récupération d'un article pour affichage
     article = get_object_or_404(Article, pk=article_id)
     return render(request, "main/article.html", {"article": article})
 

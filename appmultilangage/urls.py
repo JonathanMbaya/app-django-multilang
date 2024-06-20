@@ -21,11 +21,12 @@ from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new
 
-
+# Ajout de la route vers l'espace admin
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+# Ajout de la route vers l'application
 urlpatterns += i18n_patterns(
     path('', include('main.urls')),
 )

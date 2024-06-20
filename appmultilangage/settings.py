@@ -152,7 +152,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-# Autres configurations...
+# Autres configurations (Clé API pour tester Chat GPT)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "sk-proj-ngSapVTzlqbNBzZMUMmtT3BlbkFJYIHniuoDmR67wAHeoBXN")
 
