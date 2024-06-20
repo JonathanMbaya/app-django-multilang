@@ -1,12 +1,12 @@
-html, body{
-margin: 0rem;
-width: 100%;
-font-family: "Barlow", sans-serif;
-font-weight: 400;
-font-style: normal;
+html, body {
+    margin: 0rem;
+    width: 100%;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +34,6 @@ nav {
     width: 100%;
     top: 0rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 nav ul {
@@ -48,7 +47,7 @@ nav ul li {
     padding: .5rem;
 }
 
-ul , li a {
+ul, li a {
     list-style-type: none;
     text-decoration: none;
     color: black;
@@ -59,33 +58,33 @@ ul , li a {
 main {
     background-color: white;
     margin-top: 25rem;
-    background: linear-gradient( rgba(255, 255, 255, 0.8),rgba(255, 255, 255),rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255))
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 main h1 {
- text-align: center;
- padding: 2rem;
+    text-align: center;
+    padding: 2rem;
 }
 
 main h2 {
     margin-top: 0rem;
 }
 
-main ul {
+main .last-article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-main ul li {
+main .last-article li {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     margin-bottom: 1.5rem;
 }
 
-main ul li img {
+main .last-article li img {
     width: 30%;
     border-radius: .5rem;
 }
@@ -101,14 +100,14 @@ main ul li img {
     width: 100%;
 }
 
-.blog ul {
+.blog .articles{
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.blog ul li {
+.blog .articles li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,7 +115,7 @@ main ul li img {
     width: 30%;
 }
 
-.blog ul li img {
+.blog .articles li img {
     width: 100%;
 }
 
@@ -134,7 +133,7 @@ button:hover {
     padding: 1rem;
     color: coral;
     transition: .3s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 form {
@@ -159,3 +158,96 @@ form {
     cursor: pointer;
 }
 
+/* Media Queries */
+
+/* Styles pour les mobiles */
+@media only screen and (max-width: 480px) {
+    .logo {
+        padding-left: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 0rem;
+    }
+    nav ul li {
+        padding: .5rem;
+        font-size: 10px;
+    }
+
+    header img{
+        position: fixed;
+        z-index: -100;
+        width: 80%;
+        margin-top: 22rem;
+        width: 100%;
+    }
+
+    main {
+        background-color: white;
+        margin-top: 15rem;
+        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+    }
+
+    main .last-article {
+        margin-bottom: 5rem;
+    }
+    main .last-article li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    main .last-article li img {
+        width: 100%;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    /* CSS BLOG */
+
+    .blog {
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    .blog .articles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .blog .articles li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 4rem;
+    }
+
+    .blog .articles li img {
+        width: 100%;
+    }
+}
+
+/* Styles pour les tablettes */
+@media only screen and (max-width: 768px) {
+    main ul li {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main ul li img {
+        width: 100%;
+    }
+}

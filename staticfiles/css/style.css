@@ -159,3 +159,45 @@ form {
     cursor: pointer;
 }
 
+
+@media (max-width: 768px) {
+    .chat-box {
+        margin-top: 3rem;
+    }
+
+    .user-message, .bot-message {
+        width: 80%;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    form input {
+        width: 70%;
+    }
+}
+
+/* Styles pour les mobiles */
+@media (max-width: 480px) {
+    main ul li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .chat-box {
+        margin-top: 2rem;
+    }
+
+    .user-message, .bot-message {
+        width: 90%;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    form input {
+        width: 80%;
+    }
+}
+
+
+
