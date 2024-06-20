@@ -143,9 +143,6 @@ STATICFILES_DIRS = [
     # Autres répertoires statiques personnalisés
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
 # En mode de développement, utilisez ces paramètres pour servir les fichiers média
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
