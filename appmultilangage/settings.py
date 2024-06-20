@@ -154,5 +154,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Autres configurations...
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "sk-proj-ngSapVTzlqbNBzZMUMmtT3BlbkFJYIHniuoDmR67wAHeoBXN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
