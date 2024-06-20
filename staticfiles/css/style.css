@@ -1,0 +1,161 @@
+html, body{
+margin: 0rem;
+width: 100%;
+font-family: "Barlow", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 2rem;
+}
+
+header img {
+    position: fixed;
+    z-index: -100;
+    width: 80%;
+    margin-top: 45rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10rem;
+}
+
+nav ul li {
+    padding: .5rem;
+}
+
+ul , li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+/* Partie Main */
+
+main {
+    background-color: white;
+    margin-top: 25rem;
+    background: linear-gradient( rgba(255, 255, 255, 0.8),rgba(255, 255, 255),rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255))
+}
+
+main h1 {
+ text-align: center;
+ padding: 2rem;
+}
+
+main h2 {
+    margin-top: 0rem;
+}
+
+main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+main ul li img {
+    width: 30%;
+    border-radius: .5rem;
+}
+
+.text-content {
+    width: 40%;
+}
+
+/* CSS BLOG */
+
+.blog {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.blog ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.blog ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.blog ul li img {
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid coral;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: coral;
+    transition: .3s;
+    cursor:pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-bot {
+    background-color: rgb(118, 238, 118);
+    position: fixed !important;
+    z-index: 100;
+    left: 1rem;
+    bottom: 4rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
