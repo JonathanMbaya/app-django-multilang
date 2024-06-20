@@ -138,10 +138,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'static/'
 # Chemin absolu vers le répertoire static
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    # Autres répertoires statiques personnalisés
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+#     # Autres répertoires statiques personnalisés
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [BASE_DIR / "static"] 
+STATIC_ROOT = BASE_DIR / "staticfiles" 
 
 # En mode de développement, utilisez ces paramètres pour servir les fichiers média
 MEDIA_URL = '/media/'
