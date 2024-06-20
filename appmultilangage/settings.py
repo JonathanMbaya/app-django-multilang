@@ -150,9 +150,3 @@ STATICFILES_DIRS = [
 # En mode de développement, utilisez ces paramètres pour servir les fichiers média
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-# Autres configurations...
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-
