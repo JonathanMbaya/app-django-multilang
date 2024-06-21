@@ -1,6 +1,7 @@
 html, body {
     margin: 0rem;
-    width: 100%;
+    padding: 0rem;
+    height: 100%;
     font-family: "Barlow", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -25,6 +26,8 @@ header img {
 }
 
 nav {
+    position: relative;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     padding-left: 1rem;
@@ -58,6 +61,8 @@ ul, li a {
 main {
     background-color: white;
     margin-top: 25rem;
+    padding-bottom: 4rem ;
+    flex: 1;
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
@@ -158,17 +163,59 @@ form {
     cursor: pointer;
 }
 
-footer{
-    
+footer {
+    position: relative;
+    z-index: 50;
     bottom: 0rem;
-    margin-top: 2rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    width: 100%;
+}
+
+.article-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 10rem;
+}
+
+article{
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    background-color: black; 
-    color: white; 
-    height: 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.text-article{
+    position: absolute;
+    top: 5rem;
+    font-size: 2rem;
+    color: white;
+    width: 50%;
+}
+
+.img-article {
+    top: 2rem; 
+    z-index: -100; 
+    filter: brightness(50%);
+}
+
+.screen{
+    position: absolute;
+    top: 4rem;
+    align-items: center;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
 }
 
 /* Media Queries */
@@ -200,7 +247,7 @@ footer{
 
     main {
         background-color: white;
-        margin-top: 15rem;
+        margin-top: 20rem;
         background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
     }
 
@@ -249,6 +296,37 @@ footer{
     }
 
     .blog .articles li img {
+        width: 100%;
+    }
+    
+    main article img {
+        width: 50%;
+    }
+
+    .text-article{
+        position: absolute;
+        top: 5rem;
+        font-size: .8rem;
+        color: white;
+        width: 80%;
+    }
+
+    .img-article {
+        position: absolute;
+        width: 100%;
+        top: 2rem; 
+        z-index: -100; 
+        filter: brightness(50%);
+    }
+
+    .screen{
+        position: absolute;
+        top: 2rem;
+        align-items: center;
+        display: flex;
+        height: 50vh;
+        justify-content: center;
+        overflow: hidden;
         width: 100%;
     }
 }
