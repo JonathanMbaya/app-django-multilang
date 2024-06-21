@@ -1,12 +1,13 @@
-html, body{
-margin: 0rem;
-width: 100%;
-font-family: "Barlow", sans-serif;
-font-weight: 400;
-font-style: normal;
+html, body {
+    margin: 0rem;
+    padding: 0rem;
+    height: 100%;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +26,8 @@ header img {
 }
 
 nav {
+    position: relative;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     padding-left: 1rem;
@@ -34,7 +37,6 @@ nav {
     width: 100%;
     top: 0rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 nav ul {
@@ -48,7 +50,14 @@ nav ul li {
     padding: .5rem;
 }
 
-ul , li a {
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul, li a {
+
     list-style-type: none;
     text-decoration: none;
     color: black;
@@ -56,36 +65,45 @@ ul , li a {
 
 /* Partie Main */
 
+#up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
 main {
     background-color: white;
     margin-top: 25rem;
-    background: linear-gradient( rgba(255, 255, 255, 0.8),rgba(255, 255, 255),rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255) ,rgb(255, 255, 255))
+    padding-bottom: 4rem ;
+    flex: 1;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 main h1 {
- text-align: center;
- padding: 2rem;
+    text-align: center;
+    padding: 2rem;
 }
 
 main h2 {
     margin-top: 0rem;
 }
 
-main ul {
+main .last-article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-main ul li {
+main .last-article li {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     margin-bottom: 1.5rem;
 }
 
-main ul li img {
+main .last-article li img {
     width: 30%;
     border-radius: .5rem;
 }
@@ -101,14 +119,14 @@ main ul li img {
     width: 100%;
 }
 
-.blog ul {
+.blog .articles{
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.blog ul li {
+.blog .articles li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,8 +134,9 @@ main ul li img {
     width: 30%;
 }
 
-.blog ul li img {
+.blog .articles li img {
     width: 100%;
+    border-radius: .5rem;
 }
 
 button {
@@ -134,7 +153,7 @@ button:hover {
     padding: 1rem;
     color: coral;
     transition: .3s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 form {
@@ -149,7 +168,7 @@ form {
     position: fixed !important;
     z-index: 100;
     left: 1rem;
-    bottom: 4rem;
+    bottom: 3rem;
     width: 40px;
     height: 40px;
     display: flex;
@@ -159,45 +178,193 @@ form {
     cursor: pointer;
 }
 
-
-@media (max-width: 768px) {
-    .chat-box {
-        margin-top: 3rem;
-    }
-
-    .user-message, .bot-message {
-        width: 80%;
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-
-    form input {
-        width: 70%;
-    }
+footer {
+    position: relative;
+    z-index: 50;
+    bottom: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    width: 100%;
 }
 
+.article-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 10rem;
+}
+
+article{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.text-article{
+    position: absolute;
+    top: 5rem;
+    font-size: 2rem;
+    color: white;
+    width: 50%;
+}
+
+.img-article {
+    top: 2rem; 
+    z-index: -100; 
+    filter: brightness(50%);
+}
+
+.screen{
+    position: absolute;
+    top: 4rem;
+    align-items: center;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Media Queries */
+
 /* Styles pour les mobiles */
-@media (max-width: 480px) {
-    main ul li{
+@media only screen and (max-width: 480px) {
+    .logo {
+        padding-left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo h1{
+        font-size: 20px;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 0rem;
+    }
+    nav ul li {
+        padding: .5rem;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header img{
+        position: fixed;
+        z-index: -100;
+        width: 80%;
+        margin-top: 22rem;
+        width: 100%;
+    }
+
+    main {
+        background-color: white;
+        margin-top: 20rem;
+        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+    }
+
+    main .last-article {
+        margin-bottom: 5rem;
+    }
+    main .last-article li {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .chat-box {
-        margin-top: 2rem;
-    }
-
-    .user-message, .bot-message {
-        width: 90%;
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    form input {
         width: 80%;
+    }
+
+    main .last-article li img {
+        width: 100%;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    /* CSS BLOG */
+
+    .blog {
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    .blog .articles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .blog .articles li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 4rem;
+    }
+
+    .blog .articles li img {
+        width: 100%;
+        border-radius: .2rem;
+    }
+    
+    main article img {
+        width: 50%;
+    }
+
+    .text-article{
+        position: absolute;
+        top: 5rem;
+        font-size: .8rem;
+        color: white;
+        width: 80%;
+    }
+
+    .img-article {
+        position: absolute;
+        width: 100%;
+        top: 2rem; 
+        z-index: -100; 
+        filter: brightness(50%);
+    }
+
+    .screen{
+        position: absolute;
+        top: 2rem;
+        align-items: center;
+        display: flex;
+        height: 50vh;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
     }
 }
 
+/* Styles pour les tablettes */
+@media only screen and (max-width: 768px) {
+    main ul li {
+        flex-direction: column;
+        width: 100%;
+    }
 
-
+    main ul li img {
+        width: 100%;
+    }
+}
