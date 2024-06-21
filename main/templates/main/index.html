@@ -3,7 +3,7 @@
 <head>
     {% load i18n static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,17 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Euro 2024</h1>
+                <h1 class="animate__animated animate__slideInUp link">Euro 2024 <span class="material-symbols-outlined">trophy</span></h1>
             </div>
             <ul>
-                <li><a href="{% url 'main:index' %}">{% trans "Accueil" %}</a></li>
+                <li>
+                    <a class="link" href="{% url 'main:index' %}">
+                        <span class="material-symbols-outlined">
+                        home
+                        </span>
+                        {% trans "Accueil" %}
+                    </a>
+                </li>
                 <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
                 <li><a href="/change_language/fr/">{% trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
             </ul>
@@ -38,6 +45,9 @@
     </header>
 
     <main>
+        <span id="up" class="material-symbols-outlined animate__animated animate__slideInUp">
+            keyboard_double_arrow_up
+        </span>
         <h1>{% trans "Les dernières nouvelles tendances" %}</h1>
         <div class="last-article">
             {% for article in latest_article_list %}

@@ -106,10 +106,17 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Euro 2024</h1>
+                <h1 class="animate__animated animate__slideInUp link">Euro 2024 <span class="material-symbols-outlined">trophy</span></h1>
             </div>
             <ul>
-                <li><a href="{% url 'main:index' %}">{% trans "Accueil" %}</a></li>
+                <li>
+                    <a class="link" href="{% url 'main:index' %}">
+                        <span class="material-symbols-outlined">
+                        home
+                        </span>
+                        {% trans "Accueil" %}
+                    </a>
+                </li>
                 <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
                 <li><a href="/change_language/fr/">{% trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
             </ul>

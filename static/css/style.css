@@ -50,13 +50,27 @@ nav ul li {
     padding: .5rem;
 }
 
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 ul, li a {
+
     list-style-type: none;
     text-decoration: none;
     color: black;
 }
 
 /* Partie Main */
+
+#up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
 
 main {
     background-color: white;
