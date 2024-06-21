@@ -29,14 +29,11 @@
             <ul>
                 <li>
                     <a class="link" href="{% url 'main:index' %}">
-                        <span class="material-symbols-outlined">
-                        home
-                        </span>
                         {% trans "Accueil" %}
                     </a>
                 </li>
                 <li><a href="{% url 'main:articles' %}">{% trans "Blog" %}</a></li>
-                <li><a href="/change_language/fr/">{% trans "Français" %}</a> | <a href="/change_language/en/">{% trans "Anglais" %}</a></li>
+                <li><a href="/change_language/fr/">{% trans "Français" %} </a> | <a href="/change_language/en/"> {% trans "Anglais" %}</a></li>
             </ul>
         </nav>
     </header>
